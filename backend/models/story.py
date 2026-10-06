@@ -1,11 +1,8 @@
-from sqlalchemy import Column, Integer, String, DateTime,Boolean, ForeignKey, JSON
-from sqlalchemy.orm import func
+from sqlalchemy import Column, Integer, String, DateTime,Boolean, ForeignKey, JSON, func
 from sqlalchemy.orm import relationship
-
-
 from db.database import Base
 
-class story(Base):
+class Story(Base):
      
     __tablename__ = "Stories"
 
@@ -34,5 +31,3 @@ class StoryNode(Base):
     options = Column(JSON, default=[])  ##list of options for the next node
 
     story = relationship("story", back_populates="nodes")  ##many to one relationship with story
-
-    ##for dummy commit
