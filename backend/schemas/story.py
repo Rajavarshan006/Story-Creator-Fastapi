@@ -13,7 +13,7 @@ class StoryNodeBase(BaseModel):
     is_winning_ending : bool = False
 
 class CompleteStoryResponse(StoryNodeBase):
-    id :int
+    id : int
     options : List[StoryOptionsSchema] = []
 
     class Config:
@@ -21,7 +21,7 @@ class CompleteStoryResponse(StoryNodeBase):
 
 class StoryBase(BaseModel):
     title : str
-    session_id : optional[str] = None
+    session_id : Optional[str] = None
     
 
     class Config:
@@ -36,3 +36,5 @@ class CompleteStroryResponse(StoryBase):
     all_nodes : Dict[int,CompleteStoryNodeResponse]
     class Config:
         from_attributes = True
+
+# For dummy commit operation
