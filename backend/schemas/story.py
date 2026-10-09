@@ -37,6 +37,4 @@ class CompleteStroryResponse(StoryBase):
     class Config:
         from_attributes = True
 
-# For dummy commit operation
-
 
