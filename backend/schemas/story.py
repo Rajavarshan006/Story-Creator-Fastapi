@@ -30,9 +30,9 @@ class StoryBase(BaseModel):
 class CreateStoryRequest(StoryBase):
     theme : str
 
-class CompleteStroryResponse(StoryBase):
+class CompleteStoryResponse(StoryBase):
     id : int
-    root_node : ComplerteStoryResponse
+    root_node : CompleteStoryResponse
     all_nodes : Dict[int,CompleteStoryNodeResponse]
     class Config:
         from_attributes = True
